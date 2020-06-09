@@ -1,0 +1,3 @@
+[submodule "dependencies/toolkits/o2-blackbee-toolkit"]
+	path = dependencies/toolkits/o2-blackbee-toolkit
+	url = https://github.com/AlbusaOxyuranus/o2-blackbee-toolkit.git

@@ -262,7 +262,7 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\PFRCenterGlobal\PFRCenterGlobal.csproj">
-      <Project>{79AFA040-781D-4333-B5EE-4B549A011E1E}</Project>
+      <Project>{7B5DFA60-F256-4DD1-AE7A-F89186576A0D}</Project>
       <Name>PFRCenterGlobal</Name>
     </ProjectReference>
   </ItemGroup>
