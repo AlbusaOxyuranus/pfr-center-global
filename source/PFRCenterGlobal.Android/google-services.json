@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "631328818238",
+    "firebase_url": "https://pfr-center-global.firebaseio.com",
+    "project_id": "pfr-center-global",
+    "storage_bucket": "pfr-center-global.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631328818238:android:e583364d9836b4a2f1fd6f",
+        "android_client_info": {
+          "package_name": "com.o2bionics.pfr_center_global"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631328818238-lap1idg7ariv5ipra03ri26cmdd2ovk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mH-P_9eXavLudqjfJ4l44l2UMSK-PmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631328818238-lap1idg7ariv5ipra03ri26cmdd2ovk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

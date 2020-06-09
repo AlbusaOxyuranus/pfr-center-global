@@ -1,0 +1,53 @@
+﻿<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:resource="clr-namespace:PFRCenterGlobal.Helpers"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+       xmlns:vm="clr-namespace:PFRCenterGlobal.Views.AuthZone"
+       xmlns:controls="clr-namespace:PFRCenterGlobal.Controls" 
+       NavBarIsVisible="True"
+       Style="{StaticResource ShellStyle}"
+       x:Class="PFRCenterGlobal.AppShell">
+
+
+    <Shell.Resources>
+
+    </Shell.Resources>
+
+
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="{resource:Translate SlideMenuMain}" FlyoutIcon="BottomBarHome.png">
+
+        <ShellContent Title="{resource:Translate BottomToolBtnHome}" Icon="HomeIcon.png"
+                      ContentTemplate="{DataTemplate vm:HomePage}">
+                
+                    <!-- <Shell.TitleView> -->
+                    <!--     <Label Text="{resource:Translate  ApplicationTitle}"/>         -->
+                    <!-- </Shell.TitleView> -->
+                
+        </ShellContent>
+        <ShellContent Title="{resource:Translate BottomToolBtnEvents}" Icon="Event.png"
+                      ContentTemplate="{DataTemplate vm:EventsPage}" />
+        <ShellContent Title="{resource:Translate BottomToolBtnSpecialists}" Icon="Certificates.png"
+                      ContentTemplate="{DataTemplate vm:CertificatesPage}" />
+        <ShellContent Title="{resource:Translate BottomToolBtnMap}" Icon="Region.png"
+                      ContentTemplate="{DataTemplate vm:MapPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="{resource:Translate SlideMenuAccount}" Icon="BottomBarAccount.png">
+        <ShellContent ContentTemplate="{DataTemplate vm:AccountPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="{resource:Translate SlideMenuAbout}" FlyoutIcon="SlideMenuInfo.png">
+        <ShellContent ContentTemplate="{DataTemplate vm:AboutPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="{resource:Translate SlideMenuExit}" FlyoutIcon="BottomBarExit.png">
+        <!--<ContentPage  ControlTemplate="{DataTemplate vm:AboutPage}"/>-->
+    </FlyoutItem>
+
+</Shell>

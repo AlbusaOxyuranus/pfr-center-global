@@ -1,0 +1,151 @@
+﻿<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     mc:Ignorable="d"
+ 
+     xmlns:controls="clr-namespace:PFRCenterGlobal.Controls"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+     <!--This is main color of theme-->
+    <!--Yellow color-->
+    <Color x:Key="MainColor">#3498e5</Color>
+
+    <Color x:Key="SilverColor">#999999</Color>
+
+    <Color x:Key="SilverDark1">#e9edf0</Color>
+    <Color x:Key="SilverDark2">#41484b</Color>
+    
+    <Color x:Key="SilverDark3">#34393c</Color>
+     
+
+    <!--For Fonts-->
+    <Color x:Key="SilverDark4">#1a1a18</Color>
+
+    <Color x:Key="SilverDark5">#42494c</Color>
+
+    <Color x:Key="SpecialDark">#1e2129</Color>
+
+    <!--white color-->
+    <Color x:Key="WhiteColor">#FFFFFF</Color>
+    <!--black color-->
+    <Color x:Key="BlackColor">#000000</Color>
+
+
+  
+    <!--Button Style-->
+
+    <!--style for inner button-->
+     <Style TargetType="Button" x:Key="InnerButtonStyle">
+         <Setter Property="BackgroundColor" Value="{StaticResource SilverDark5}"/>
+        <Setter Property="BorderColor" Value="{StaticResource MainColor}"/>
+        <Setter Property="BorderRadius" Value="25"/>
+        <Setter Property="MinimumHeightRequest" Value="25"/>
+        <Setter Property="MinimumWidthRequest" Value="150"/>
+        <Setter Property="WidthRequest" Value="150"/>
+        <Setter Property="BorderWidth" Value="2"/>
+        <Setter Property="TextColor" Value="{StaticResource MainColor}"/>
+    </Style>
+    <!--style for fill button-->
+     <Style TargetType="Button" BasedOn="{StaticResource ShellBaseStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource MainColor}"/>
+        <!--<Setter Property="BorderColor" Value="{StaticResource SilverColor}"/>-->
+        <Setter Property="BorderRadius" Value="25"/>
+        <Setter Property="MinimumHeightRequest" Value="25"/>
+        <Setter Property="MinimumWidthRequest" Value="150"/>
+        <Setter Property="WidthRequest" Value="150"/>
+        <Setter Property="BorderWidth" Value="2"/>
+        <Setter Property="TextColor" Value="{StaticResource SilverDark5}"/>
+    </Style>
+
+     <!--End Button Style-->
+
+
+    <!--Style NavigationPage-->
+    <Style TargetType="NavigationPage">
+        <Setter Property="BackgroundColor" Value="{StaticResource SilverDark1}"/>
+        <Setter Property="BarBackgroundColor" Value="{StaticResource SilverDark5}"/>
+        <Setter Property="BarTextColor" Value="{StaticResource WhiteColor}"/>
+    </Style>
+     <!--End Style NavigationPage-->
+
+
+    <!--Style ShellStyle-->
+    <Style x:Key="ShellStyle" TargetType="{x:Type Shell}" >
+
+
+        <!--<Setter Property="BackgroundColor" Value="{StaticResource SilverDark1}"/>-->
+        <Setter Property="Shell.FlyoutBackgroundColor"
+                    Value="{StaticResource SilverDark3}" />
+        
+
+        <Setter Property="Shell.ForegroundColor" Value="{StaticResource WhiteColor}"/>
+
+        <Setter Property="Shell.TitleColor" Value="{StaticResource BlackColor}"/>
+        <Setter Property="Shell.BackgroundColor" Value="{StaticResource WhiteColor}"/>
+
+        <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource SpecialDark}"/>
+        <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource MainColor}"/>
+        <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource MainColor}"/>
+        <!--<Setter Property="Shell.DisabledColor" Value="{StaticResource SilverDark1}"/>-->
+        <Setter Property="Shell.TabBarDisabledColor" Value="{StaticResource SilverDark1}"/>
+        <Setter Property="Shell.UnselectedColor" Value="{StaticResource SilverColor}"/>
+        <!--<Setter Property="NavigationPage.BackgroundColor" Value="{StaticResource SilverDark1}"/>-->
+        <!--<Setter Property="NavigationPage.BarBackgroundColor" Value="{StaticResource SilverDark1}"/>
+        <Setter Property="NavigationPage.BarTextColor" Value="{StaticResource WhiteColor}"/>-->
+
+    </Style>
+
+    <!--<Style x:Key="ShellBaseStyle"
+               TargetType="Element">
+        <Setter Property="Shell.BackgroundColor"
+                    Value="{StaticResource FirstColor}" />
+        <Setter Property="Shell.ForegroundColor"
+                    Value="{StaticResource TitleFontColor}" />
+        <Setter Property="Shell.TitleColor"
+                    Value="{StaticResource SecondColor}" />
+        <Setter Property="Shell.DisabledColor"
+                    Value="{StaticResource SecondColor}" />
+        <Setter Property="Shell.UnselectedColor"
+                    Value="{StaticResource ContentFontColor}" />
+    </Style>-->
+
+    <!--End Style ShellStyle-->
+
+    <!--OLD CODE--> 
+       <Color x:Key="FirstColor">#FFFFFF</Color>
+    <Color x:Key="SecondColor">#FF9500</Color>
+
+    <Color x:Key="TitleFontColor">#575757</Color>
+    <Color x:Key="ContentFontColor">#ACACAC</Color>
+
+ 
+
+    <Style TargetType="Grid" x:Key="GridRootStyle">
+        <Setter Property="Margin" Value="5"/>
+    </Style>
+    <Style TargetType="Grid" x:Key="GridMainStyle">
+        <Setter Property="Margin" Value="12,0"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="TitleLabelStyle">
+        <Setter Property="TextColor" Value="{StaticResource TitleFontColor}"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="Medium"/>
+    </Style>
+
+    <Style TargetType="Label" BasedOn="{StaticResource ShellBaseStyle}">
+        <Setter Property="TextColor" Value="{StaticResource ContentFontColor}"/>
+    </Style>
+
+ 
+
+    <Style TargetType="controls:Title" BasedOn="{StaticResource ShellBaseStyle}">
+        <Setter Property="TextColor" Value="{StaticResource TitleFontColor}"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="TextUpper" Value="True"/>
+    </Style>
+
+
+</ResourceDictionary>
