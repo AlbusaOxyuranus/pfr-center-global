@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:PFRCenterGlobal.Helpers;assembly=PFRCenterGlobal"
+             xmlns:controls="clr-namespace:PFRCenterGlobal.Controls;assembly=PFRCenterGlobal"
+             xmlns:vm="clr-namespace:PFRCenterGlobal.ViewModels"
+             Title="Регистрация"
+             x:Class="PFRCenterGlobal.Views.Register.Register1Page">
+
+   
+
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        
+        <Grid Style="{StaticResource GridRootStyle}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Style="{StaticResource GridMainStyle}">
+                <Label Text="Шаг 1 из 3"></Label>
+            </StackLayout>
+       
+            
+            <Grid Style="{StaticResource GridMainStyle}" Grid.Row="1">
+
+                <StackLayout >
+
+                    
+                    <StackLayout Margin="0,30">
+                        <Button Style="{StaticResource InnerButtonStyle}" Text="{helpers:Translate btnTitleExistUser}"/>
+                    </StackLayout>
+                    <StackLayout Margin="0,30">
+                        <Label Text="{helpers:Translate labelRegisterStep1}"/>
+                        <Entry></Entry>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox/>
+                        <Label Margin="10,5,0,0" Text="{helpers:Translate LabelRegisterStep1_WithText}"/>
+                        <Label  Margin="0,5,0,0" Text="{helpers:Translate LabelRegisterStep1_TermsOfAnAgreement}"/>
+                    </StackLayout>
+
+                    <Button Text="{helpers:Translate btnTitleNextStep2}" Command="{Binding GoRegisterStep2Command}"/>
+                    <!--<Label Text="{StaticResource lblRegisterStep1_Service}" HorizontalOptions="Center" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnLabelTapped"
+                                NumberOfTapsRequired="2" />
+                        </Label.GestureRecognizers>
+                    </Label>-->
+
+                    <!--<Label Text="{StaticResource LabelRegisterStep1_TermsOfAnAgreement}" HorizontalOptions="Center" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnLabelTapped"
+                                NumberOfTapsRequired="2" />
+                        </Label.GestureRecognizers>
+                    </Label>-->
+                    
+                    <!--<Label Text="Hdello, world!"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand" />-->
+
+                 </StackLayout>
+            </Grid>
+            <!--<StackLayout>
+           
+        </StackLayout>-->
+            
+        </Grid>
+        
+    </ContentPage.Content>
+
+</ContentPage>

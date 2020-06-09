@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:PFRCenterGlobal.Helpers;assembly=PFRCenterGlobal"
+             xmlns:controls="clr-namespace:PFRCenterGlobal.Controls;assembly=PFRCenterGlobal"
+             xmlns:vm="clr-namespace:PFRCenterGlobal.ViewModels"
+             x:Class="PFRCenterGlobal.Views.Register.Register3Page">
+
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+       <Grid Style="{StaticResource GridRootStyle}">
+            <Grid Style="{StaticResource GridMainStyle}">
+                <StackLayout>
+                    <Button Text="{helpers:Translate btnTitleNextStep3}" Command="{Binding GoRegisterStepFinishCommand}"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PFRCenterGlobal.Views.Presentation.Presentation1Page">
+       <!--<d:ContentPage.BindingContext>
+        <vm:AboutViewModel/>
+    </d:ContentPage.BindingContext>-->
+
+    <ContentPage.Content>
+        <Grid x:Name="GridRoot">
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

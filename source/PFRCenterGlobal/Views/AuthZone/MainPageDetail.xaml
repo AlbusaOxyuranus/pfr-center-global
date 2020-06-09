@@ -1,0 +1,17 @@
+﻿<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:page="clr-namespace:PFRCenterGlobal.Views.AuthZone"
+    x:Class="PFRCenterGlobal.Views.AuthZone.MainPageDetail"
+    Title="PFR CENTER GLOBAL">
+
+    <TabbedPage.Children>
+
+        <page:EventsPage Title="События" IconImageSource="monkeyicon.png"/>
+
+        <page:CertificatesPage Title="Сертификаты" IconImageSource="monkeyicon.png"/>
+
+    </TabbedPage.Children>
+
+
+</TabbedPage>

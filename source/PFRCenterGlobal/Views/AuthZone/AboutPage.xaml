@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PFRCenterGlobal.Views.AuthZone.AboutPage"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:PFRCenterGlobal.ViewModels"
+             xmlns:resources="clr-namespace:PFRCenterGlobal.Helpers">
+    <d:ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </d:ContentPage.BindingContext>
+    <Grid x:Name="GridRoot">
+
+        <ScrollView>
+            <Grid Margin="10" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="25*" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="1">
+                    <Image Margin="0,0,0,20" HeightRequest="150" Source="LogoOrange.png"></Image>
+                    <Label Text="{resources:Translate AboutApp}" HorizontalOptions="Center" />
+                    <Label Text="{resources:Translate LabelInfoAbout}" HorizontalOptions="Center" />
+                    <Label Text="ПФР ЦЕНТР ГЛОБАЛ" HorizontalOptions="Center" />
+                    <Label Text="{Binding VersionValue}" HorizontalOptions="Center" />
+                </StackLayout>
+                <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                    <Label Text="Copyright © 2020 O2 Bionics Inc." HorizontalOptions="Center"></Label>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

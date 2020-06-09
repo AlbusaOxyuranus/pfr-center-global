@@ -1,0 +1,155 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.800" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\AuthZone\SlideMenu" />
+    <Folder Include="Views\Splash\" />
+    <Folder Include="Views\Presentation\" />
+    <Folder Include="Views\AuthZone\" />
+    <Folder Include="Data\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Dictionaries\" />
+    <Folder Include="Resources\" />
+    <Folder Include="ViewModels\Logic\" />
+    <Folder Include="ViewModels\Interfaces\" />
+    <Folder Include="Models\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Converters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+    <None Remove="Data\Import_DB_PFR.json" />
+    <None Remove="Data\Data.json" />
+    <None Remove="Resources\AppResources.ru.Designer.cs" />
+    <None Remove="Resources\AppResources.Designer.cs" />
+    <None Remove="Places.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="**/*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="bin\**" />
+    <None Remove="obj\**" />
+    <EmbeddedResource Remove="Dictionaries\Silver\NavigationPageStyle.xaml" />
+    <EmbeddedResource Remove="Dictionaries\Silver\Colors.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Data\Import_DB_PFR.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\NoSort\AuthArea\SlideMenu\SlideMenuPageMaster.xaml" />
+    <EmbeddedResource Remove="Views\NoSort\MapPage.xaml" />
+    <EmbeddedResource Remove="Views\NoSort\NewsPage.xaml" />
+    <EmbeddedResource Update="Views\AuthZone\QuestionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LogonPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Register\Register1Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Register\Register2Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Register\Register3Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Presentation\Presentation2Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Presentation\Presentation3Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AuthZone\Slidemenu\AccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AuthZone\Slidemenu\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dictionaries\SilverTheme.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Import_DB_PFR.json" />
+    <EmbeddedResource Include="Data\Data.json" />
+    <EmbeddedResource Include="Resources\AppResources.ru.Designer.cs" />
+    <EmbeddedResource Include="Resources\AppResources.Designer.cs" />
+    <EmbeddedResource Include="Places.json">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\About\AboutPage.xaml.cs" />
+    <Compile Remove="Views\LogonPage.xaml.cs" />
+    <Compile Remove="Views\NoSort\MapPage.xaml.cs" />
+    <Compile Remove="Views\NoSort\SplashPage.cs" />
+    <Compile Remove="Views\NoSort\NewsPage.xaml.cs" />
+    <Compile Remove="MainPage.xaml.cs" />
+    <None Remove=".DS_Store" />
+    <None Remove="Views\.DS_Store" />
+    <None Remove="Views\.DS_Store" />
+    <Compile Update="Views\AuthZone\Slidemenu\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AuthZone\Slidemenu\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core\O2.ToolKit\O2.ToolKit.csproj" />
+    <ProjectReference Include="..\..\..\..\Core\O2.ToolKit.Core\O2.ToolKit.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\Core\O2.ToolKit.Core.Commands\O2.ToolKit.Core.Commands.csproj" />
+    <ProjectReference Include="..\..\..\..\Core\O2.ToolKit.Core.Converters\O2.ToolKit.Core.Converters.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Dictionaries\WhiteStyle.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
