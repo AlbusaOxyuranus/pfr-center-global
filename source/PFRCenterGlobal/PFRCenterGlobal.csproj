@@ -136,10 +136,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Core\O2.ToolKit\O2.ToolKit.csproj" />
-    <ProjectReference Include="..\..\..\..\Core\O2.ToolKit.Core\O2.ToolKit.Core.csproj" />
-    <ProjectReference Include="..\..\..\..\Core\O2.ToolKit.Core.Commands\O2.ToolKit.Core.Commands.csproj" />
-    <ProjectReference Include="..\..\..\..\Core\O2.ToolKit.Core.Converters\O2.ToolKit.Core.Converters.csproj" />
+    <ProjectReference Include="..\Core\O2.ToolKit.Core.Commands\O2.ToolKit.Core.Commands.csproj" />
+    <ProjectReference Include="..\Core\O2.ToolKit.Core.Controls\O2.ToolKit.Core.Controls.csproj" />
+    <ProjectReference Include="..\Core\O2.ToolKit.Core.Converters\O2.ToolKit.Core.Converters.csproj" />
+    <ProjectReference Include="..\Core\O2.ToolKit.Core\O2.ToolKit.Core.csproj" />
+    <ProjectReference Include="..\Core\O2.ToolKit\O2.ToolKit.csproj" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Dictionaries\WhiteStyle.xaml">
