@@ -1,0 +1,51 @@
+﻿<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     x:Class="PFRCenterGlobal.Views.AuthZone.HomePage"
+    xmlns:controls="clr-namespace:PFRCenterGlobal.Controls"
+    xmlns:resources="clr-namespace:PFRCenterGlobal.Helpers"
+    xmlns:vm="clr-namespace:PFRCenterGlobal.ViewModels"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="{resources:Translate TitleHome}"
+   >
+    <ContentPage.Resources>
+        <DataTemplate x:Key="CollectionViewControlTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="230"/>
+                </Grid.RowDefinitions>
+                <Frame HasShadow="True" Grid.Row="0" BorderColor="Silver" Padding="10">
+                    <StackLayout>
+                        <controls:Title Text="{Binding Title}"/>
+                        <Image Source="test.png" WidthRequest="100" HeightRequest="100" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="{Binding Content}" TextType="Html"/>
+                        <Label Text="{Binding OpenDate}"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </DataTemplate>
+
+        <Style TargetType="CollectionView" x:Key="HomeItem">
+            <Setter Property="ItemTemplate" Value="{StaticResource CollectionViewControlTemplate}"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <d:ContentPage.BindingContext>
+        <vm:MainViewModel/>
+    </d:ContentPage.BindingContext>
+
+    <Grid x:Name="GridRoot" Style="{StaticResource GridRootStyle}" >
+
+        <StackLayout>
+            <!--<controls:Title Text="{resources:Translate TitleHome}"></controls:Title>-->
+            <Label Text="Наши ресурсы в сети Интернет"/>
+            <CollectionView ItemsSource="{Binding Items}" Style="{StaticResource HomeItem}"
+                            SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged"
+                            />
+            <!--<Button Text="Test button"/>-->
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PFRCenterGlobal.Views.AuthZone.CartPage"
+             xmlns:controls="clr-namespace:PFRCenterGlobal.Controls"
+    xmlns:resources="clr-namespace:PFRCenterGlobal.Helpers"
+    xmlns:converter="clr-namespace:PFRCenterGlobal.Converters"
+   >
+
+    <Grid x:Name="GridRoot" >
+
+        <StackLayout>
+            <controls:Title Text="{resources:Translate TitleCart}"></controls:Title>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

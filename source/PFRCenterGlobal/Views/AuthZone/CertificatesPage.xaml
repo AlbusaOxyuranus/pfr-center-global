@@ -1,0 +1,86 @@
+﻿<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="PFRCenterGlobal.Views.AuthZone.CertificatesPage"
+    xmlns:resources="clr-namespace:PFRCenterGlobal.Helpers"
+    Title="{resources:Translate TitleSpecialists}"
+    xmlns:controls="clr-namespace:PFRCenterGlobal.Controls" xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+
+    <ContentPage.Resources>
+         <DataTemplate x:Key="CertificateCollectionViewControlTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Frame HasShadow="True" Grid.Row="0" BorderColor="Silver" Padding="10"
+                        
+                    
+                    VerticalOptions="StartAndExpand"
+                    Margin="0, 5"
+                    IsClippedToBounds="True">
+                   <Grid>
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                              <StackLayout Grid.Column="0">
+                                   <!--<image:CircleImage BorderThickness="3" BorderColor="{StaticResource TitleFontColor}" Grid.Row="0"
+                           HorizontalOptions="Center" Margin="0,20,0,60"
+                           Aspect="AspectFill" Source="{Binding PhotoUrl}" WidthRequest="100" HeightRequest="100" />-->
+                        <Image BackgroundColor="Silver"
+                            
+                               WidthRequest="120" HeightRequest="120" Margin="0,0,10,0"
+                               Aspect="AspectFill" Source="{Binding PhotoUrl}" >
+                        </Image>
+                    </StackLayout>
+                             <StackLayout Grid.Column="1">
+                        <controls:Title Text="{Binding Ids}"/>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Serial}" ForegroundColor="Brown" FontAttributes="Bold" />
+                                    <Span Text="{Binding Number}" FontAttributes="Bold" TextColor="{StaticResource TitleFontColor}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                       <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Lastname}" FontAttributes="Bold" />
+                                    <Span Text=" "/>
+                                    <Span Text="{Binding Firstname}" FontAttributes="Bold" />
+                                    <Span Text=" "/>
+                                    <Span Text="{Binding Middlename}" FontAttributes="Bold" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Text="{Binding AllLocations}" TextColor="{StaticResource TitleFontColor}"/>
+                     
+                    </StackLayout>
+          
+                   </Grid>
+                   
+                </Frame>
+            </Grid>
+        </DataTemplate>
+
+        <Style TargetType="CollectionView" x:Key="CertificateItem">
+            <Setter Property="ItemTemplate" Value="{StaticResource CertificateCollectionViewControlTemplate}"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid x:Name="GridRoot" Style="{StaticResource GridRootStyle}" >
+
+        <StackLayout>
+            <!--<controls:Title Text="{resources:Translate TitleSpecialists}"></controls:Title>-->
+               <CollectionView  x:Name="ListViewCertificates" Style="{StaticResource CertificateItem}" SelectionChanged="ListViewCertificates_ItemSelected"
+                             SelectionMode="Single" ItemsSource="{Binding Items}"
+                             />
+        </StackLayout>
+     
+    </Grid>
+
+</ContentPage>
