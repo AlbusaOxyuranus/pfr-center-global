@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PFRCenterGlobal.BackendForMobile.Features.Certificates
 {
-    [Route("certificates")]
+    [Route("api/certificates")]
     public class CertificatesController : ControllerBase
     {
-        private IReadOnlyCollection<Certificate> _certificateModels = new List<Certificate>()
+        private readonly IReadOnlyCollection<Certificate> _certificateModels = new List<Certificate>()
         {
             new Certificate()
             {
@@ -18,42 +19,52 @@ namespace PFRCenterGlobal.BackendForMobile.Features.Certificates
             new Certificate()
             {
                 Id=2
+            },
+            new Certificate()
+            {
+                Id = 3
             }
         };
         
         [HttpGet]
         [Route("{id}")]
-        public Task<Certificate> GetByIdAsync(long id, CancellationToken ct)
+        public async Task<IActionResult> GetByIdAsync(long id, CancellationToken ct)
         {
-            throw new NotImplementedException();
+            await Task.Delay(100, ct);
+            var result = _certificateModels.FirstOrDefault(x => x.Id == id);
+            return Ok(result);
         }
         
         [HttpGet]
         [Route("")]
-        public Task<IReadOnlyCollection<Certificate>> GetAllAsync(CancellationToken ct)
+        public async Task<IActionResult> GetAllAsync(CancellationToken ct)
         {
-            throw new NotImplementedException();
+            await Task.Delay(100, ct);
+            return Ok(_certificateModels);
         }
 
         [HttpPut]
         [Route("{id}")]
-        public Task<Certificate> UpdateAsync(Certificate certificate, CancellationToken ct)
+        public async Task<IActionResult> UpdateAsync(Certificate certificate, CancellationToken ct)
         {
+            await Task.Delay(100, ct);
             throw new NotImplementedException();
         }
 
         [HttpPut]
         [HttpPost]
         [Route("")]
-        public Task<Certificate> AddAsync(Certificate certificate, CancellationToken ct)
+        public async Task<IActionResult> AddAsync(Certificate certificate, CancellationToken ct)
         {
+            await Task.Delay(100, ct);
             throw new NotImplementedException();
         }
 
         [HttpDelete]
         [Route("{id}")]
-        public Task RemoveAsync(long id, CancellationToken ct)
+        public async Task<IActionResult> RemoveAsync(long id, CancellationToken ct)
         {
+            await Task.Delay(100, ct);
             throw new NotImplementedException();
         }
     }
