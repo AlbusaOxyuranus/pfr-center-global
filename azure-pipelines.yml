@@ -28,7 +28,7 @@ steps:
 - task: AndroidSigning@3
   inputs:
     apkFiles: '**/*.apk'
-    apksignerKeystoreFile: 'keystone/pfr-center-global/pfr-center-global.keystore'
+    apksignerKeystoreFile: 'keystore/pfr-center-global/pfr-center-global.keystore'
     apksignerKeystorePassword: '$(KeyStore.Password)'
     apksignerKeystoreAlias: 'pfr-center-global'
     apksignerKeyPassword: '$(KeyStore.Password)'
