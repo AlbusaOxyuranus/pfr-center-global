@@ -32,3 +32,10 @@ steps:
     apksignerKeystorePassword: '$(KeyStore.Password)'
     apksignerKeystoreAlias: 'pfr-center-global'
     apksignerKeyPassword: '$(KeyStore.Password)'
+    apksignerArguments: '--verbose'
+    #apksignerFile: # Optional
+    zipalign: true
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '**/*.apk'
+    #zipalignFile: # Optional   
