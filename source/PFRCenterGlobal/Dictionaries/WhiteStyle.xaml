@@ -13,7 +13,7 @@
     <Color x:Key="TitleFontColor">#575757</Color>
     <Color x:Key="ContentFontColor">#ACACAC</Color>
 
-    <Style x:Key="ShellBaseStyle"
+    <Style x:Key="ShellStyle"
                TargetType="Element">
         <Setter Property="Shell.BackgroundColor"
                     Value="{StaticResource FirstColor}" />
@@ -40,10 +40,10 @@
         <Setter Property="FontSize" Value="Medium"/>
     </Style>
 
-    <Style TargetType="Label" BasedOn="{StaticResource ShellBaseStyle}">
+    <Style TargetType="Label" BasedOn="{StaticResource ShellStyle}">
         <Setter Property="TextColor" Value="{StaticResource ContentFontColor}"/>
     </Style>
-    <Style TargetType="Button" BasedOn="{StaticResource ShellBaseStyle}">
+    <Style TargetType="Button" BasedOn="{StaticResource ShellStyle}">
         <Setter Property="BackgroundColor" Value="{StaticResource SecondColor}"/>
         <Setter Property="BorderRadius" Value="25"/>
         <Setter Property="MinimumHeightRequest" Value="25"/>
@@ -64,7 +64,7 @@
         <Setter Property="TextColor" Value="{StaticResource SecondColor}"/>
     </Style>
 
-    <Style TargetType="controls:Title" BasedOn="{StaticResource ShellBaseStyle}">
+    <Style TargetType="controls:Title" BasedOn="{StaticResource ShellStyle}">
         <Setter Property="TextColor" Value="{StaticResource TitleFontColor}"/>
         <Setter Property="FontAttributes" Value="Bold"/>
         <Setter Property="FontSize" Value="Medium"/>

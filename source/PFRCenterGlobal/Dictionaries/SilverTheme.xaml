@@ -47,7 +47,7 @@
         <Setter Property="TextColor" Value="{StaticResource MainColor}"/>
     </Style>
     <!--style for fill button-->
-     <Style TargetType="Button" BasedOn="{StaticResource ShellBaseStyle}">
+     <Style TargetType="Button" >
         <Setter Property="BackgroundColor" Value="{StaticResource MainColor}"/>
         <!--<Setter Property="BorderColor" Value="{StaticResource SilverColor}"/>-->
         <Setter Property="BorderRadius" Value="25"/>
@@ -72,8 +72,6 @@
 
     <!--Style ShellStyle-->
     <Style x:Key="ShellStyle" TargetType="{x:Type Shell}" >
-
-
         <!--<Setter Property="BackgroundColor" Value="{StaticResource SilverDark1}"/>-->
         <Setter Property="Shell.FlyoutBackgroundColor"
                     Value="{StaticResource SilverDark3}" />
@@ -95,23 +93,10 @@
         <Setter Property="NavigationPage.BarTextColor" Value="{StaticResource WhiteColor}"/>-->
 
     </Style>
-
-    <!--<Style x:Key="ShellBaseStyle"
-               TargetType="Element">
-        <Setter Property="Shell.BackgroundColor"
-                    Value="{StaticResource FirstColor}" />
-        <Setter Property="Shell.ForegroundColor"
-                    Value="{StaticResource TitleFontColor}" />
-        <Setter Property="Shell.TitleColor"
-                    Value="{StaticResource SecondColor}" />
-        <Setter Property="Shell.DisabledColor"
-                    Value="{StaticResource SecondColor}" />
-        <Setter Property="Shell.UnselectedColor"
-                    Value="{StaticResource ContentFontColor}" />
-    </Style>-->
-
-    <!--End Style ShellStyle-->
-
+     <!--End Style ShellStyle-->
+    
+     
+     
     <!--OLD CODE--> 
        <Color x:Key="FirstColor">#FFFFFF</Color>
     <Color x:Key="SecondColor">#FF9500</Color>
@@ -134,13 +119,13 @@
         <Setter Property="FontSize" Value="Medium"/>
     </Style>
 
-    <Style TargetType="Label" BasedOn="{StaticResource ShellBaseStyle}">
+    <Style TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource ContentFontColor}"/>
     </Style>
 
  
 
-    <Style TargetType="controls:Title" BasedOn="{StaticResource ShellBaseStyle}">
+    <Style TargetType="controls:Title">
         <Setter Property="TextColor" Value="{StaticResource TitleFontColor}"/>
         <Setter Property="FontAttributes" Value="Bold"/>
         <Setter Property="FontSize" Value="Medium"/>
